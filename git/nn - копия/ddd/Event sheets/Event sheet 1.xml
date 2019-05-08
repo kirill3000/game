@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="786418540956527">
+            <conditions>
+                <condition id="0" name="On clicked" sid="605454867714187" type="Button3" />
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="794040332847301" type="AJAX">
+                    <param id="0" name="Tag">&quot;post&quot;</param>
+                    <param id="1" name="URL">&quot;https://clickhouse.000webhostapp.com/Add.php&quot;</param>
+                    <param id="2" name="Data">&quot;Types=&quot; &amp; &quot;X&quot; &amp; &quot;&amp;Q=&quot; &amp; &quot;Z&quot; &amp; &quot;&amp;A=&quot; &amp; &quot;C&quot;</param>
+                    <param id="3" name="Method">&quot;POST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119006088166005">
+            <conditions>
+                <condition id="0" name="On completed" sid="993576780833328" type="AJAX">
+                    <param id="0" name="Tag">&quot;post&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="224305679146232" type="AJAX">
+                    <param id="0" name="Tag">&quot;xx&quot;</param>
+                    <param id="1" name="URL">&quot;https://clickhouse.000webhostapp.com/index.php&quot;</param>
+                    <param id="2" name="Data">AJAX.LastData</param>
+                    <param id="3" name="Method">&quot;POST&quot;</param>
+                </action>
+                <action id="-30" name="Set from JSON" sid="837897735609610" type="Text2">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

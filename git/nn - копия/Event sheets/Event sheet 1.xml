@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-group description="" sid="215042136923596" title="First" />
+        <event-block sid="786418540956527">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="605454867714187" type="Button3" />
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="794040332847301" type="AJAX">
+                    <param id="0" name="Tag">&quot;post&quot;</param>
+                    <param id="1" name="URL">&quot;https://clickhouse.000webhostapp.com/Add.php&quot;</param>
+                    <param id="2" name="Data">&quot;Types=&quot; &amp; &quot;X&quot; &amp; &quot;&amp;Q=&quot; &amp; &quot;Z&quot; &amp; &quot;&amp;A=&quot; &amp; browser.ExecJS(&quot;var d = new Date(); d.toLocaleString();&quot;)</param>
+                    <param id="3" name="Method">&quot;POST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119006088166005">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="993576780833328" type="System">
+                    <param id="0" name="Interval (seconds)">5.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="224305679146232" type="AJAX">
+                    <param id="0" name="Tag">&quot;xx&quot;</param>
+                    <param id="1" name="URL">&quot;https://clickhouse.000webhostapp.com/game.php&quot;</param>
+                    <param id="2" name="Data">&quot;HTML_Id=&quot; &amp; TextBox.Text</param>
+                    <param id="3" name="Method">&quot;POST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="363834091024098">
+            <conditions>
+                <condition id="0" name="On completed" sid="222083987767459" type="AJAX">
+                    <param id="0" name="Tag">&quot;xx&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="564925517753354" type="TextBox2">
+                    <param id="0" name="Text">tokenat(AJAX.LastData,0,&quot;$%^$%^&quot;) </param>
+                </action>
+                <action id="-30" name="Set from JSON" sid="581500194120522" type="TextBox2">
+                    <param id="0" name="JSON">tokenat(AJAX.LastData,0,&quot;$%^$%^&quot;) </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="768003583329302">
+            <conditions>
+                <condition id="0" name="On completed" sid="139799548493086" type="AJAX">
+                    <param id="0" name="Tag">&quot;xx&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set CSS style" sid="109859796916553" type="TextBox2">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;10px solid Red&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
